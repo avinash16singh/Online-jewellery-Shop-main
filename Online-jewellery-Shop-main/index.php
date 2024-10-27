@@ -63,7 +63,7 @@
 
             </div>
             <div class="cols-2">
-                <img src="designs/logo.jpg" alt="logo">
+                <img src="designs\rj.jpeg" alt="logo">
             </div>
         </div>
 
@@ -279,7 +279,7 @@
                     </div>
                 </div>
                 <div class="footer-cols-2">
-                    <img src="designs/logo.jpg">
+                    <img src="designs\rj.jpeg">
                     <p>Download App for Andriod and ios mobile phone</p>
                 </div>
                 <div class="footer-cols-3">
