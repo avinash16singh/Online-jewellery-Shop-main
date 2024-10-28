@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: radial-gradient(#fff, #ffd6d5);
+  background: radial-gradient(#4abbdd, #ffd6d5);
 }
 
 nav {
@@ -39,6 +39,8 @@ li {
   list-style: none;
 }
 
+
+
 a {
   padding: 20px;
   width: 100px;
@@ -63,21 +65,40 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.cols-2,
-.row1.cols-2 {
-  flex-basis: 30%;
-  min-width: 300px;
+/* Slider container */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 5px;
 }
-.cols-2 img {
-  max-width: 100%;
-  padding: 50px 0;
-  margin-top: 100px;
+
+/* Slide images */
+.slides {
+  display: none;
+  width: 100%;
 }
-.cols-2 h1 {
-  font-size: 50px;
-  line-height: 60px;
-  margin: 25px 0;
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  transform: translateY(-50%);
 }
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
 
 .details {
   font-weight: bold;
@@ -100,10 +121,7 @@ a {
   margin: 30px 0;
   border-radius: 30px;
 }
-/* .header, .row1{
-  background: radial-gradient(#fff,#ffd6d5);
 
-} */
 .header.row {
   margin-top: 70px;
 }
