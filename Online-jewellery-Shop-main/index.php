@@ -30,22 +30,40 @@
 
 
     <!-- Home section begins here -->
-    <div class="row">
-        <div class="cols-2">
-            <h1>Give your looks<br>A New Style</h1>
-            <p>"Make jewellery contact before eyes contact"</p>
+    <!-- Home section begins here -->
+     
+<div class="row">
+    <div class="cols-2">
+    <marquee>Welcome to Rana Jewellers! Discover our exclusive collection of jewelry!</marquee>
 
-        </div>
-        <div class="cols-2">
-            <img src="designs/design3.jpg" alt="design">
+        <h1>Give your looks<br>A New Style</h1>
+        <p>"Make jewellery contact before eyes contact"</p>
+    </div>
+    <div class="cols-2">
+        <!-- Slider Container -->
+        <div class="slider">
+            <img class="slides" src="designs\design1.jpg" alt="Slide 1">
+            <img class="slides" src="designs\design2.jpg" alt="Slide 2">
+            <img class="slides" src="designs\design3.jpg" alt="Slide 3">
+
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
     </div>
+</div>
+<marquee direction="left" scrollamount="5" bgcolor="#f0e68c" loop="infinite">
+💥✨🌟💫⭐   Diwali Offer: Flat 20% off on all gold jewelry items!🎇🌠🎆
+</marquee>
+
+
     <!-- </div> -->
 
     <section class="row1">
         <div class="cols-2">
             <img src="designs/design4.jpg" alt="design">
         </div>
+        
         <div class="cols-2">
             <h1>Jewellery is like an ice-cream.<br></h1>
             <p>"There is always a space for more"</p>
@@ -58,6 +76,10 @@
     <section class="about" id="about">
         <h2>About</h2>
         <div class="row">
+        <marquee direction="left" scrollamount="5" bgcolor="red" loop="infinite">
+    RANA JEWELLERS
+</marquee>
+
             <div class="cols-2">
                 <p>Rana Jewellers is one of the oldest jewellery shop located in Ramadevi, kanpur nagar, up. It gives the quality services of ordering the jewellery items.It had got a experience of more than 20 years with well trained employees.</p>
 
@@ -260,9 +282,9 @@
             P.O.Box:212665<br>
             Tel:+91 8953086009<br>
          E-mail:avi2001singh@gmail.com<br>
-            Email:Ranajewellery@gmail.com<br>
+            Email:ranajewellery@gmail.com<br>
         </h3>
-        <img src="designs/map.png">
+        <img src="designs\Map.png">
     </section>
     <!-- Contact section ends here -->
     <!-- Footer section begins here -->
@@ -299,6 +321,34 @@
 
         </div>
     </div>
+    <script>
+  let slideIndex = 0;
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("slides");
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
+
+  showSlides(); // Initialize the slider
+
+  // Manual navigation
+  function changeSlide(n) {
+    slideIndex += n;
+    if (slideIndex < 1) { slideIndex = slides.length; }
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    showSlides();
+  }
+</script>
+
 </body>
 
 </html>
